@@ -1,45 +1,90 @@
 body {
     background-color: #0a0a23;
-  }
-  
-  #text {
+    margin-top: 250px;
+}
+
+#text {
     background-color: #0a0a23;
     color: #ffffff;
     padding: 10px;
-  }
-  
-  #game {
+}
+
+#game {
     max-width: 500px;
     max-height: 400px;
     background-color: #ffffff;
     color: #ffffff;
-    margin: 30px auto 0px;
+    margin: 30px auto 0;
     padding: 10px;
-  }
-  
-  #controls,
-  #stats {
+}
+
+#controls,
+#stats {
     border: 1px solid #0a0a23;
     padding: 5px;
     color: #0a0a23;
-  }
-  
-  #monsterStats {
+}
+
+#monsterStats {
     display: none;
     border: 1px solid #0a0a23;
     padding: 5px;
     color: #ffffff;
     background-color: #c70d0d;
-  }
-  
-  .stat {
+}
+
+.stat {
     padding-right: 10px;
-  }
-  
-  button {
+}
+
+button {
     cursor: pointer;
     color: #0a0a23;
     background-color: #feac32;
     background-image: linear-gradient(#fecc4c, #ffac33);
     border: 3px solid #feac32;
+    margin: 5px;
+}
+
+
+@media (max-width: 600px) {
+    #game {
+        max-width: 100%;
+        margin: 10px auto;
+        padding: 5px;
+    }
+
+    #text, #controls, #stats, #monsterStats {
+        font-size: 14px; 
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    body {
+        margin-top: 100px; 
+    }
+}
+
+@keyframes glowAndMove {
+    0% {
+      box-shadow: 0 0 5px rgba(246, 53, 53, 0.682);
+      border-color: rgba(246, 53, 53, 0.682);
+    }
+    50% {
+      box-shadow: 0 0 20px rgba(246, 53, 53, 0.682);
+      border-color: rgba(246, 53, 53, 0.682);
+    }
+    100% {
+      box-shadow: 0 0 5px rgba(246, 53, 53, 0.682);
+      border-color: rgba(246, 53, 53, 0.682);
+    }
+  }
+  
+  #button3 {
+    border: 1px solid rgba(246, 53, 53, 0.682);
+    animation: glowAndMove 1.5s infinite;
   }
